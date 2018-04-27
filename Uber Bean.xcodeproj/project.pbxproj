@@ -14,6 +14,7 @@
 		27FE1E3720939F7C008F2338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FE1E3520939F7C008F2338 /* LaunchScreen.storyboard */; };
 		27FE1E3A20939F7C008F2338 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FE1E3920939F7C008F2338 /* main.m */; };
 		27FE1E422093A032008F2338 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FE1E412093A032008F2338 /* MapKit.framework */; };
+		27FE1E452093B524008F2338 /* Cafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FE1E442093B524008F2338 /* Cafe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		27FE1E3820939F7C008F2338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27FE1E3920939F7C008F2338 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27FE1E412093A032008F2338 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		27FE1E432093B524008F2338 /* Cafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cafe.h; sourceTree = "<group>"; };
+		27FE1E442093B524008F2338 /* Cafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cafe.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 		27FE1E2920939F7C008F2338 /* Uber Bean */ = {
 			isa = PBXGroup;
 			children = (
+				27FE1E432093B524008F2338 /* Cafe.h */,
+				27FE1E442093B524008F2338 /* Cafe.m */,
 				27FE1E2A20939F7C008F2338 /* AppDelegate.h */,
 				27FE1E2B20939F7C008F2338 /* AppDelegate.m */,
 				27FE1E2D20939F7C008F2338 /* ViewController.h */,
@@ -154,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27FE1E452093B524008F2338 /* Cafe.m in Sources */,
 				27FE1E2F20939F7C008F2338 /* ViewController.m in Sources */,
 				27FE1E3A20939F7C008F2338 /* main.m in Sources */,
 				27FE1E2C20939F7C008F2338 /* AppDelegate.m in Sources */,
