@@ -7,6 +7,8 @@
 //
 
 #import "NetworkManager.h"
+#import "Cafe.h"
+
 
 @implementation NetworkManager
 
@@ -22,10 +24,24 @@
                 NSLog(@"Got result!");
                 NSDictionary* result = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
                 self.data = result;
+                [self makeCafes:self.data];
     }];
     [task resume];
     return self.data;
 }
 
+-(void)makeCafes:(NSDictionary*)dictionary {
+    NSMutableArray *cafes = [NSMutableArray new];
+    self.cafes = cafes;
+    NSLog(@"trying to make array");
+    NSArray *temp = [[NSArray alloc] initWithArray:self.data[@"businesses"]];
+    for (NSDictionary *dict in temp) {
+        Cafe *tempCafe = [[Cafe alloc] initWithDictionary:dict];
+        [self.cafes addObject:tempCafe];
+        NSLog(@"Added cafe %ld", self.cafes.count);
+        
+    }
+    NSLog(@"Added cafe %ld", self.cafes.count);
+}
 
 @end

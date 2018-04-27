@@ -10,12 +10,14 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "NetworkManager.h"
+#import "Cafe.h"
 
 @interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) NetworkManager *networkManager;
 @property (nonatomic, strong) NSDictionary *data;
+@property (nonatomic, strong) NSMutableArray *cafes;
 @end
 
 @implementation ViewController
@@ -29,17 +31,16 @@
     self.mapView.delegate = self;
     [self.locationManager requestWhenInUseAuthorization];
     self.mapView.showsUserLocation = YES;
+    self.cafes = [NSMutableArray new];
     
     NetworkManager *networkManager = [NetworkManager new];
     self.networkManager = networkManager;
     self.data = [networkManager getData];
-    [self makeCafes:self.data];
+//    [self makeCafes:self.data];
 
 }
 
--(void)makeCafes:(NSDictionary*)dictionary {
-    
-}
+
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     CLLocation *location = locations[0];

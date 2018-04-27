@@ -10,6 +10,7 @@
 
 @interface NetworkManager : NSObject
 @property (nonatomic, strong) NSDictionary *data;
+@property (nonatomic, strong) NSMutableArray *cafes;
 -(NSDictionary*)getData;
 
 @end
