@@ -14,6 +14,8 @@
 		27FE1E3720939F7C008F2338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FE1E3520939F7C008F2338 /* LaunchScreen.storyboard */; };
 		27FE1E3A20939F7C008F2338 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FE1E3920939F7C008F2338 /* main.m */; };
 		27FE1E422093A032008F2338 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FE1E412093A032008F2338 /* MapKit.framework */; };
+		27FE1E482093C4DF008F2338 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FE1E472093C4DF008F2338 /* NetworkManager.m */; };
+		27FE1E4B2093C978008F2338 /* Cafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FE1E4A2093C978008F2338 /* Cafe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		27FE1E3820939F7C008F2338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27FE1E3920939F7C008F2338 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27FE1E412093A032008F2338 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		27FE1E462093C4DF008F2338 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		27FE1E472093C4DF008F2338 /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		27FE1E492093C978008F2338 /* Cafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cafe.h; sourceTree = "<group>"; };
+		27FE1E4A2093C978008F2338 /* Cafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cafe.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,10 @@
 				27FE1E2B20939F7C008F2338 /* AppDelegate.m */,
 				27FE1E2D20939F7C008F2338 /* ViewController.h */,
 				27FE1E2E20939F7C008F2338 /* ViewController.m */,
+				27FE1E492093C978008F2338 /* Cafe.h */,
+				27FE1E4A2093C978008F2338 /* Cafe.m */,
+				27FE1E462093C4DF008F2338 /* NetworkManager.h */,
+				27FE1E472093C4DF008F2338 /* NetworkManager.m */,
 				27FE1E3020939F7C008F2338 /* Main.storyboard */,
 				27FE1E3320939F7C008F2338 /* Assets.xcassets */,
 				27FE1E3520939F7C008F2338 /* LaunchScreen.storyboard */,
@@ -154,6 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27FE1E4B2093C978008F2338 /* Cafe.m in Sources */,
+				27FE1E482093C4DF008F2338 /* NetworkManager.m in Sources */,
 				27FE1E2F20939F7C008F2338 /* ViewController.m in Sources */,
 				27FE1E3A20939F7C008F2338 /* main.m in Sources */,
 				27FE1E2C20939F7C008F2338 /* AppDelegate.m in Sources */,
