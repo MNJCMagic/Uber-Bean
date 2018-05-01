@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface Cafe : NSObject
+@interface Cafe : NSObject <MKAnnotation>
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
+
 @property (nonatomic, strong) NSURL* imageURL;
 @property (nonatomic, strong) NSString* name;
 

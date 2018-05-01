@@ -12,7 +12,7 @@
 #import "NetworkManager.h"
 #import "Cafe.h"
 
-@interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
+@interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate, NetworkManagerProtocol>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) NetworkManager *networkManager;
@@ -33,10 +33,12 @@
     self.mapView.showsUserLocation = YES;
     self.cafes = [NSMutableArray new];
     
+    
     NetworkManager *networkManager = [NetworkManager new];
     self.networkManager = networkManager;
-    self.data = [networkManager getData];
-//    [self makeCafes:self.data];
+    self.networkManager.delegate = self;
+    [self.networkManager getData];
+    
 
 }
 
@@ -57,6 +59,14 @@
         [self.locationManager startUpdatingLocation];
 
     }
+}
+
+-(void)deliverCafes:(NSMutableArray<Cafe*>*)array {
+    NSLog(@"delegate called %lu", (unsigned long)array.count);
+    NSMutableArray *new = [[NSMutableArray alloc] initWithArray:array];
+    self.cafes = new;
+
+    
 }
 
 @end

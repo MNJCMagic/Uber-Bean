@@ -30,18 +30,22 @@
     return self.data;
 }
 
--(void)makeCafes:(NSDictionary*)dictionary {
+-(NSMutableArray*)makeCafes:(NSDictionary*)dictionary {
     NSMutableArray *cafes = [NSMutableArray new];
     self.cafes = cafes;
     NSLog(@"trying to make array");
     NSArray *temp = [[NSArray alloc] initWithArray:self.data[@"businesses"]];
     for (NSDictionary *dict in temp) {
         Cafe *tempCafe = [[Cafe alloc] initWithDictionary:dict];
+        NSLog(@"%@", tempCafe.name);
         [self.cafes addObject:tempCafe];
         NSLog(@"Added cafe %ld", self.cafes.count);
         
     }
-    NSLog(@"Added cafe %ld", self.cafes.count);
+    NSLog(@"about to delegate");
+    
+    [self.delegate deliverCafes:self.cafes];
+    return self.cafes;
 }
 
 @end
