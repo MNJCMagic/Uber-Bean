@@ -65,6 +65,8 @@
     NSLog(@"delegate called %lu", (unsigned long)array.count);
     NSMutableArray *new = [[NSMutableArray alloc] initWithArray:array];
     self.cafes = new;
+    [self.mapView addAnnotations:self.cafes];
+    [self.mapView showAnnotations:self.cafes animated:YES];
 
     
 }
